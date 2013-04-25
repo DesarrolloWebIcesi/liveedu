@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<!-- Descriptores tld de los tags de siadcon -->
+ 
+<taglib>
+<tlibversion>1.0</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>siadcon</shortname> 
+<info>Libreria de tags para siadcon</info> 
+
+<tag>
+<name>info</name>
+<tagclass>Siadcon.TagSiadcon</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Sistema Siadcon: muestra la pagina</info>
+
+<attribute>
+<name>dimPagina</name>
+<required>false</required>
+</attribute>
+</tag>
+
+<tag>
+<name>seguridad</name>
+<tagclass>Siadcon.TagSeguridad</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Sistema Siadcon: Seguridad de login</info>
+</tag>
+
+<tag>
+<name>menu</name>
+<tagclass>Siadcon.TagMenu</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Etiqueta que despliega el menu</info>
+
+<attribute>
+<name>coordenadaX</name>
+<required>false</required>
+</attribute>
+
+<attribute>
+<name>coordenadaY</name>
+<required>false</required>
+</attribute>
+
+<attribute>
+<name>tipo</name>
+<required>true</required>
+</attribute>
+
+<attribute>
+<name>posicion</name>
+<required>false</required>
+</attribute>
+
+<attribute>
+<name>idSitio</name>
+<required>true</required>
+</attribute> 
+</tag> 
+
+<tag>
+<name>funcion</name>
+<tagclass>Siadcon.TagFuncion</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Etiqueta que escribe la funcion javascript del menu</info>
+
+<attribute>
+<name>colorFuente</name>
+<required>true</required>
+</attribute>
+
+<attribute>
+<name>colorFuenteMouseOver</name>
+<required>true</required>
+</attribute>
+
+<attribute>
+<name>background</name>
+<required>true</required>
+</attribute>
+
+<attribute>
+<name>backgroundMouseOver</name> 
+<required>true</required>
+</attribute>
+
+<attribute>
+<name>sitio</name>
+<required>true</required>
+</attribute>
+</tag>
+
+
+<tag>
+<name>barra</name>
+<tagclass>Siadcon.TagBarraMenu</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Sistema Siadcon: Bara Menu</info>  
+</tag>
+</taglib> 

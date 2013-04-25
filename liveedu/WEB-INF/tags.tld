@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<!-- a tag library descriptor -->
+<taglib>
+<tlibversion>1.0</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>tags</shortname>
+<info>
+Libreria de tags para los profesores
+</info>
+
+<tag>
+<name>empleados</name>
+<tagclass>tagsprofesores.TagEmpleados</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Etiqueta que muestra la lista de los profesores de tiempo parcial</info>
+</tag>
+
+<tag>
+<name>planta</name>
+<tagclass>tagsprofesores.TagProfesoresPlanta</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Etiqueta que muestra la lista de profesores de planta</info>
+</tag>
+
+<tag>
+<name>completo</name>
+<tagclass>tagsprofesores.TagTiempoCompleto</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Etiqueta que muestra la lista de los profesores de tiempo completo</info>
+<attribute>
+<name>departamento</name>
+<required>false</required>
+</attribute>
+</tag>
+
+<tag>
+<name>hora</name>
+<tagclass>tagsprofesores.TagHoraCatedra</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Etiqueta que muestra la lista de los profesores de hora catedra</info>
+<attribute>
+<name>departamento</name>
+<required>false</required>
+</attribute>
+</tag>
+
+<tag>
+<name>extras</name>
+<tagclass>tagsprofesores.TagExtra</tagclass>
+<bodycontent>empty</bodycontent>
+<info>Etiqueta que muestra personas o empleados que los jefes de depto o programa quieren que sean listados aunque no se desempeñen como profesores en ese momento</info>
+<attribute>
+<name>departamento</name>
+<required>false</required>
+</attribute>
+</tag>
+
+
+</taglib>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="liveedu"
+  id="myeclipse.1260560244787"
+  context-root="/liveedu"
+  j2ee-spec="1.4"
+  archive="liveedu.war">
+  <attributes>
+    <attribute name="webrootdir" value="liveedu" />
+  </attributes>
+</project-module>
+

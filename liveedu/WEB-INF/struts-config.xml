@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jkarta.apache.rg/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <data-sources>
+        <data-source key="db" type="org.apache.commons.dbcp.BasicDataSource">          
+
+            <set-property property="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+            <!-- Production variables -->
+            <set-property property="url" value="jdbc:oracle:thin:@simbiosis.icesi.edu.co:1521:bdicesi" />
+            <set-property property="username" value="websiaepre" />
+            <set-property property="password" value="ciat05krto" />
+            
+            <!-- Development variables 
+            <set-property property="url" value="jdbc:oracle:thin:@192.168.220.20:1521:dbreg5" />
+            <set-property property="username" value="websiaepre" />
+            <set-property property="password" value="DqdFWo7qKz2U" />
+            -->           
+		    
+	
+            <set-property property="maxActive" value="100" />
+            <set-property property="maxWait" value="5000" />
+            <set-property property="defaultReadOnly" value="false" />
+        </data-source>		
+    </data-sources>
+  
+    <form-beans>
+        <form-bean name="registroForm" type="co.edu.icesi.liveedu.form.RegistroForm"/>
+    </form-beans>
+    <global-exceptions />
+    <global-forwards>
+        <forward name="errorGlobal" path="/error.jsp" />
+        <forward name="errorSession" path="/errorSession.jsp" />
+    </global-forwards>
+    <action-mappings >
+
+        <action
+            path="/inicio"
+            type="co.edu.icesi.liveedu.action.InicioAction"
+            unknown="false">
+            <forward
+                name="exito"
+                path="/preRegistro.do"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+		
+        <action
+            name="registroForm"
+            path="/preRegistro"
+            type="co.edu.icesi.liveedu.action.PreRegistroAction"
+            validate="false">
+            <forward
+                name="exito"
+                path="/registro.jsp"
+                redirect="false"
+                contextRelative="false" />
+            <forward
+                name="noIngreso"
+                path="/noIngreso.jsp"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+		
+        <action
+            name="registroForm"
+            path="/registro"
+            type="co.edu.icesi.liveedu.action.RegistroAction"
+            unknown="false">
+            <forward
+                name="exito"
+                path="/registro.jsp"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+    </action-mappings>
+
+    <controller
+        bufferSize="4096"
+        debug="0"
+        locale="false"
+        nocache="false"
+        inputForward="false" />
+    <message-resources null="true" parameter="co.edu.icesi.ApplicationResources" />
+</struts-config>
+
