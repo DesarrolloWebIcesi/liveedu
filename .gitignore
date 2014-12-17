@@ -161,3 +161,17 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+############
+## NetBeans
+############
+## Ignore project files created by NetBeans
+nbproject/private/
+nbproject/genfiles.properties
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+log/
